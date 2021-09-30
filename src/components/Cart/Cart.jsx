@@ -1,7 +1,13 @@
-const Cart = () => {
+const Cart = ({onAdd}) => {
     return(
     <>
-    <h1>Cart Page</h1>
+    <div className="container">
+        <h2 className="text-center m-2">Carrito de Compras</h2>
+        <hr/>
+    </div>
+    <div>
+      {onAdd}
+    </div>
     </>
     )
 

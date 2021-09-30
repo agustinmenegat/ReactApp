@@ -1,13 +1,9 @@
 import NavBar from "./components/NavBar/NavBar"
-import "../src/components/NavBar/Navbar.css"
+import "../src/App.css"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import "../src/components/ItemListContainer/ItemListContainer.css"
 import Footer from "./components/Footer/Footer"
-import "../src/components/Footer/Footer.css"
-import "../src/components/ItemCount/ItemCount.css"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Switch  } from "react-router-dom"; 
-/* import CartWidget from "./components/NavBar/CartWidget"; */
 import Raquetas from "./components/Raquetas/Raquetas";
 import Indumentaria from "./components/Indumentaria/Indumentaria";
 import Cart from "./components/Cart/Cart";
