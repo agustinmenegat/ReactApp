@@ -8,7 +8,7 @@ export const products = [{
 },
 {
     "id": "2",
-    "name":"HARROW VIBE",
+    "name":"HARROW SUMMER VIBES",
     "description":"Used by Karim Gawad #4",        
     "price":105,
     "category":"Raquetas",

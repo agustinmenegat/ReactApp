@@ -88,3 +88,6 @@ body {
     display: flex;
     opacity: 1 00;
 }
+.fotoCart{
+    max-width: 200px;
+}

@@ -1,9 +1,19 @@
+import { useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
+import Context from "../../Context/Context"
 
 const ItemDetail = ({productDetail, id}) => {
 
+    const {setCart} = useContext(Context)
 
-    
+    const addProduct = (qty) => {
+        const productQty = {...productDetail, qty}
+        setCart(previous => {
+            return[...previous, productQty]
+        })
+    }
+
+
     return (
         <>
         <div className="container d-flex justify-content-center mb-5">
@@ -14,7 +24,7 @@ const ItemDetail = ({productDetail, id}) => {
                     <p className="card-text text-uppercase fs-5"><b>{productDetail.name}</b></p>
                     <p className="card-text">{productDetail.description}</p>
                     <p className="card-text">U$S {productDetail.price}</p>
-                    <ItemCount initial={0} stock={productDetail.stock} productDetail={productDetail} onAdd/>
+                    <ItemCount initial={1} stock={productDetail.stock} onAdd={addProduct}/>
                 </div>
             </div>
         </div>
