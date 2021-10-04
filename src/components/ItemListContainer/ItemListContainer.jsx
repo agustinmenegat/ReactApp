@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemList from './ItemList';
 import getProductsByCategory from "../../functions/getProductsByCategory";
-/* import { useEffect } from "react" */
+
 
 const ItemListContainer = ({category}) => {
 

@@ -6,10 +6,10 @@ import { BrowserRouter, Route, Switch  } from "react-router-dom";
 import Raquetas from "./components/Raquetas/Raquetas";
 import Indumentaria from "./components/Indumentaria/Indumentaria";
 import Cart from "./components/Cart/Cart";
-/* import Context from "./Context/Context"; */
 import Header from "./components/Header/Header";
-import Context from "./Context/Context";
+import CartContext from "./Context/CartContext";
 import { useState } from "react";
+
 
 const App = () => {
 
@@ -17,8 +17,8 @@ const App = () => {
 
 
     return (
-        <Context.Provider value={{cart,setCart}}>
-            <BrowserRouter>
+        <BrowserRouter>
+            <CartContext.Provider value={{cart,setCart}}>
                 <Header/>
                 <Switch>
                     <Route path="/" component={ItemListContainer} exact/>
@@ -29,8 +29,8 @@ const App = () => {
                 </Switch>
 
                 <Footer />
-            </BrowserRouter>
-        </Context.Provider>
+            </CartContext.Provider>
+        </BrowserRouter>
     )
 }
 export default App;

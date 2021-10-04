@@ -91,3 +91,6 @@ body {
 .fotoCart{
     max-width: 120px;
 }
+.btn-danger{
+    padding: 1px 8px;
+}
