@@ -1,16 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Context from "../../Context/Context";
-/* import {products} from "./../../data/data" */
+import {products} from "./../../data/data"
 
 const Cart = () => {
 
   const {cart} = useContext(Context)
- /*  const {list} = useContext(Context) */
+  const [list, setList] = useState(products);
 
-  function handleRemove(id){
+  //esta funcion no tiene funcionalidad
+  const handleRemove = (id) => {
     console.log(id);
+    const newList = list.filter((item) => item.id !== id);
+  
+    setList(newList);
   }
- 
+
   const listaDeTotales = [];
 
   return(
@@ -26,6 +30,7 @@ const Cart = () => {
 
               const total = productDetail.price * productDetail.qty
               listaDeTotales.push(total)
+              
 
               return(
               <li className="text-center list-unstyled m-2">

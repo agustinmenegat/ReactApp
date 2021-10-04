@@ -15,6 +15,7 @@ const App = () => {
 
     const [cart,setCart] = useState([]);
 
+
     return (
         <Context.Provider value={{cart,setCart}}>
             <BrowserRouter>
