@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import Context from "../../Context/Context";
+/* import {products} from "./../../data/data" */
 
 const Cart = () => {
 
   const {cart} = useContext(Context)
+ /*  const {list} = useContext(Context) */
+
+  function handleRemove(id){
+    console.log(id);
+  }
  
   const listaDeTotales = [];
 
@@ -27,7 +33,8 @@ const Cart = () => {
                 Producto: <b>{productDetail.name}</b> <br />
                 Precio por unidad: <b>U$S {productDetail.price}</b> <br />
                 Unidades: <b>{productDetail.qty}</b> <br />
-                Total: <b>U$S {productDetail.price * productDetail.qty}</b> 
+                Total: <b>U$S {productDetail.price * productDetail.qty}</b> <br />
+                <button type="button" className="btn btn-danger m-2" onClick={()=>handleRemove(productDetail.id)}>X</button>
               </li>
               )
             }
