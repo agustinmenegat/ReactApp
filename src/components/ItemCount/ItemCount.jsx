@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, paramOnAdd}) => {
     
     const [counter,setCounter] = useState(initial);
 
@@ -26,7 +26,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p className="m-2">{counter}</p> 
                 <button className="btnMas" onClick={handleSumar}>+</button> <br />
             </div>    
-            <button className="btn btn-primary" onClick={()=>onAdd(counter)}>Agregar al carrito</button>
+            <button className="btn btn-primary" onClick={()=>paramOnAdd(counter)}>Agregar al carrito</button>
         </div>
         </>
     )

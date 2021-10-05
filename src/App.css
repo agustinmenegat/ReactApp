@@ -94,3 +94,6 @@ body {
 .btn-danger{
     padding: 1px 8px;
 }
+.card-img-top{
+    max-width: 300px;
+}

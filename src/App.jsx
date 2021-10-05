@@ -7,18 +7,14 @@ import Raquetas from "./components/Raquetas/Raquetas";
 import Indumentaria from "./components/Indumentaria/Indumentaria";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
-import CartContext from "./Context/CartContext";
-import { useState } from "react";
+import {CartProvider} from "./context/CartContext";
 
 
 const App = () => {
 
-    const [cart,setCart] = useState([]);
-
-
     return (
+    <CartProvider>
         <BrowserRouter>
-            <CartContext.Provider value={{cart,setCart}}>
                 <Header/>
                 <Switch>
                     <Route path="/" component={ItemListContainer} exact/>
@@ -29,8 +25,8 @@ const App = () => {
                 </Switch>
 
                 <Footer />
-            </CartContext.Provider>
         </BrowserRouter>
+    </CartProvider>
     )
 }
 export default App;

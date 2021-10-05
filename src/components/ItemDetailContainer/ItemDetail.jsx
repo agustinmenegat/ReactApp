@@ -1,22 +1,14 @@
-import { useContext } from "react"
 import ItemCount from "../ItemCount/ItemCount"
-import CartContext from "./../../Context/CartContext"
+import { useCartContext } from './../../context/CartContext';
 
 const ItemDetail = ({productDetail, id}) => {
 
-    const {setCart} = useContext(CartContext)
-
-    const addProduct = (qty) => {
-        const productQty = {...productDetail, qty}
-        setCart(previous => {
-            return[...previous, productQty]
-        })
-    }
-
+    const {addToCart} = useCartContext();
+    const onAdd = (quantity) => addToCart(productDetail, quantity)
 
     return (
         <>
-        <div className="container d-flex justify-content-center mb-5">
+        <div data-aos="fade-up" data-aos-duration="3000" className="container d-flex justify-content-center mb-5">
             <div className="text-center">
                 <img src={`/img/${id}.jpg`} className="card-img-top" alt="producPhoto"/>
                 <div className="card-body">
@@ -24,7 +16,7 @@ const ItemDetail = ({productDetail, id}) => {
                     <p className="card-text text-uppercase fs-5"><b>{productDetail.name}</b></p>
                     <p className="card-text">{productDetail.description}</p>
                     <p className="card-text">U$S {productDetail.price}</p>
-                    <ItemCount initial={1} stock={productDetail.stock} onAdd={addProduct}/>
+                    <ItemCount initial={1} stock={productDetail.stock} paramOnAdd={onAdd}/>
                 </div>
             </div>
         </div>
