@@ -1,10 +1,8 @@
 import React, {createContext, useState, useEffect, useContext} from "react";
-
-//creo contexto
 export const CartContext = createContext({});
 export const useCartContext = () => useContext(CartContext);
 
-//provider
+
 export const CartProvider = (props) =>{
     const [cart, setCart] = useState([]);
     const [productsInCart, setProductsInCart] = useState(0);
@@ -49,7 +47,7 @@ export const CartProvider = (props) =>{
         setProductsInCart(inCart);
     }, [cart]);
 
-    //return del context
+
     return(
         <>
             <CartContext.Provider value={{

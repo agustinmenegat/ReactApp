@@ -1,4 +1,5 @@
 import {useCartContext} from '../../context/CartContext'
+import {Link} from "react-router-dom"
 
 
 const Cart = () => {
@@ -9,7 +10,12 @@ const Cart = () => {
 
   if(cart.length === 0){
     return(
-      <h2 className="text-center m-5">😭 Carrito Vacío 😭</h2>
+      <>
+      <div className="text-center m-5">
+        <h2 className="m-5">😭 Carrito Vacío 😭</h2>
+        <Link to={`/`}><button className="btn btn-primary fs-4 m-5">Ver Productos</button></Link>
+      </div>
+      </>
     )
   }else{
     return(
@@ -41,7 +47,7 @@ const Cart = () => {
             </ul>
             <hr />
             <h2>Total a pagar: U$S {listaDeTotales.reduce((previous, next) => previous + next)}</h2>
-            <button className="btn btn-primary m-4">Finalizar Compra</button>
+            <button className="btn btn-primary m-4">Terminar Compra</button>
             <button className="btn btn-dark" onClick={clearCart}>Vaciar el carro</button>
           </div>
         </div>
