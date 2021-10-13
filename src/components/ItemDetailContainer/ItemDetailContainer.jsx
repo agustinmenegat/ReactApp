@@ -9,15 +9,36 @@ const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const parametros = useParams()
 
+/*     const { id } = useParams();
+        
+    useEffect(() => {
+        const db = firestore
+        const collections = db
+            .collection("products")
+
+        collections
+            .get()
+            .then((results) => {
+                const data = results.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+                setProducts(data.find(res => res.id === id))
+            })
+            .catch(err => console.log(err))
+},[id]); */
+
     useEffect(() => {
         const db = firestore
         const coleccion = db.collection("productos")
+
         const consulta = coleccion.doc(parametros.id).get()
         consulta
             .then(res => setProducto(res.data()))
             .catch(err => console.log(err))
+
     },[])
-    console.log(producto);
+    
 
     return (
         <ItemDetail producto={producto}/>
