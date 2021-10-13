@@ -33,8 +33,8 @@ const Cart = () => {
                 
                 return(
                 <li className="text-center list-unstyled m-2">
-                  <img src={`/img/${productDetail.id}.jpg`} className="fotoCart" alt="producPhoto"/> <br />
-                  Producto: <b>{productDetail.name}</b> <br />
+                  <img src={productDetail.image} className="fotoCart" alt="producPhoto"/> <br />
+                  Producto: <b>{productDetail.title}</b> <br />
                   Precio por unidad: <b>U$S {productDetail.price}</b> <br />
                   Unidades: <b>{productDetail.quantity}</b> <br />
                   Total: <b>U$S {productDetail.price * productDetail.quantity}</b> <br />

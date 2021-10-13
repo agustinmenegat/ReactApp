@@ -87,10 +87,12 @@ body {
     align-items: flex-start;
 }
 .labelCart{
-    background-color: #a7c4f0;
+    background: linear-gradient(#bebebe, #e4e4e4);
     border-radius: 100px;
-    padding: 10px;
-
+    padding: 13px 10px 10px 10px;
+}
+.labelCart:hover{
+    background: linear-gradient(#41a841, #5cf55c);
 }
 .material-icons-outlined{
     color: black;
