@@ -8,9 +8,9 @@ const ItemDetail = (producto) => {
 
     return (
         <>
-        <div data-aos="fade-up" data-aos-duration="3000" className="container d-flex justify-content-center mb-5">
+        <div producto-aos="fade-up" producto-aos-duration="3000" className="container d-flex justify-content-center mb-5">
             <div className="text-center">
-                <img src={producto.pictureUrl} className="card-img-top" alt="foto de producto"/>
+                <img src={producto.pictureUrl} className="card-img-top" alt="foto de item"/>
                 <div className="card-body">
                     <h5 className="card-title visually-hidden">{producto.id}</h5>
                     <p className="card-text text-uppercase fs-5"><b>{producto.name}</b></p>

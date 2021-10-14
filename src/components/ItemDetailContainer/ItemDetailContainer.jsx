@@ -7,44 +7,35 @@ import { firestore } from "../../firebase/firebase"
 const ItemDetailContainer = () => {
 
     const [producto, setProducto] = useState({})
-    const parametros = useParams()
-
-/*     const { id } = useParams();
-        
+    const {id} = useParams()
+    
     useEffect(() => {
         const db = firestore
-        const collections = db
-            .collection("products")
+        const coleccion = db
+            .collection("productos")
 
-        collections
+        coleccion
             .get()
             .then((results) => {
                 const data = results.docs.map((doc) => ({
                     id: doc.id,
                     ...doc.data()
                 }));
-                setProducts(data.find(res => res.id === id))
+                
+                setProducto(data.find(res => res.id === id))
+                console.log(data);
+                
             })
             .catch(err => console.log(err))
-},[id]); */
+        },[id]); 
+        
+        console.log(producto);
 
-    useEffect(() => {
-        const db = firestore
-        const coleccion = db.collection("productos")
-
-        const consulta = coleccion.doc(parametros.id).get()
-        consulta
-            .then(res => setProducto(res.data()))
-            .catch(err => console.log(err))
-
-    },[])
-    
-
-    return (
-        <ItemDetail producto={producto}/>
-    )
-}
-
+        return (
+            <ItemDetail producto={producto}/>
+            )
+        }
+        
 export default ItemDetailContainer
 
 

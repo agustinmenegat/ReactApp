@@ -8,16 +8,16 @@ import Spinner from 'react-bootstrap/Spinner';
 const ItemListContainer = () => {
 
   const [productos,setProductos] = useState([])
-  const parametros = useParams()
+  const {id} = useParams()
 
   useEffect(()=>
     {
         const db = firestore
         const coleccion = db.collection("productos")
         let consulta
-        if (!parametros.id) consulta = coleccion.get()
-        if (parametros.id === "1") consulta = coleccion.where("categoryId", "==", "1").get()
-        if (parametros.id === "2") consulta = coleccion.where("categoryId", "==", "2").get()
+        if (!id) consulta = coleccion.get()
+        if (id === "1") consulta = coleccion.where("categoryId", "==", "1").get()
+        if (id === "2") consulta = coleccion.where("categoryId", "==", "2").get()
 
         consulta
             .then(res => {
@@ -36,8 +36,9 @@ const ItemListContainer = () => {
                 document.getElementById("spinner").style.display = "none"
             })
             .catch(err => console.log(err))
-    }, [parametros])
+    }, [id])
 
+    
   return(
         <>
         <div className="text-center">
