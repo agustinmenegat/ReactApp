@@ -4,9 +4,8 @@ import Footer from "./components/Footer/Footer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Switch  } from "react-router-dom"; 
 import Cart from "./components/Cart/Cart";
-import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 import {CartProvider} from "./context/CartContext";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => {
@@ -14,7 +13,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <CartProvider>
-                <Header/>
+                <Navbar/>
                 <Switch>
                     <Route path="/" component={ItemListContainer} exact/>
                     <Route path="/category/:id" component={ItemListContainer}/>

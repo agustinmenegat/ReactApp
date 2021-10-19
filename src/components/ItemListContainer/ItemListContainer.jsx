@@ -3,7 +3,6 @@ import ItemList from './ItemList';
 import {firestore} from './../../firebase/firebase';
 import { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Spinner from 'react-bootstrap/Spinner';
 
 const ItemListContainer = () => {
 
@@ -22,33 +21,36 @@ const ItemListContainer = () => {
         consulta
             .then(res => {
                 const documento = res.docs
-                let auxiliarProductos = []
+                let misProductos = []
 
                 documento.forEach(producto => {
                     const consultaFinal = {
                         id: producto.id,
                         ...producto.data()
                     }
-                    auxiliarProductos.push(consultaFinal)
+                    misProductos.push(consultaFinal)
                 })
-
-                setProductos(auxiliarProductos)
-                document.getElementById("spinner").style.display = "none"
+                setProductos(misProductos)
             })
             .catch(err => console.log(err))
     }, [id])
 
     
-  return(
-        <>
-        <div className="text-center">
-            <Spinner id="spinner" animation="grow"/>
-        </div>
-        <div className="container">
-            <ItemList productos={productos} />     
-        </div>
-        </>
-    )
+    if(productos.length === 0){
+        return (
+            <div className="text-center m-5">
+                <div className="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )       
+        }else{
+            return(
+            <div className="container">
+                <ItemList productos={productos} />
+            </div>
+            )
+        }    
 }
 
   export default ItemListContainer;

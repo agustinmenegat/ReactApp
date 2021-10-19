@@ -3,16 +3,14 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { firestore } from "../../firebase/firebase"
 
-
 const ItemDetailContainer = () => {
 
-    const [producto, setProducto] = useState({})
+    const [productos, setProductos] = useState([])
     const {id} = useParams()
     
     useEffect(() => {
         const db = firestore
-        const coleccion = db
-            .collection("productos")
+        const coleccion = db.collection("productos")
 
         coleccion
             .get()
@@ -22,19 +20,29 @@ const ItemDetailContainer = () => {
                     ...doc.data()
                 }));
                 
-                setProducto(data.find(res => res.id === id))
-                console.log(data);
-                
+                setProductos(data.find(res => res.id == id))                
             })
             .catch(err => console.log(err))
         },[id]); 
         
-        console.log(producto);
-
+        if(productos.length === 0){
         return (
-            <ItemDetail producto={producto}/>
+            <div className="text-center">
+                <div className="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )       
+        }else{
+            return(
+            <div>
+                <ItemDetail producto={productos}/>
+            </div>
             )
-        }
+        } 
+    }        
+        
+            
         
 export default ItemDetailContainer
 
