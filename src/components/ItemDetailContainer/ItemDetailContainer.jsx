@@ -4,14 +4,12 @@ import ItemDetail from "./ItemDetail";
 import { firestore } from "../../firebase/firebase"
 
 const ItemDetailContainer = () => {
-
     const [productos, setProductos] = useState([])
     const {id} = useParams()
     
     useEffect(() => {
         const db = firestore
         const coleccion = db.collection("productos")
-
         coleccion
             .get()
             .then((results) => {
@@ -19,7 +17,7 @@ const ItemDetailContainer = () => {
                     id: doc.id,
                     ...doc.data()
                 }));
-                
+                // eslint-disable-next-line eqeqeq
                 setProductos(data.find(res => res.id == id))                
             })
             .catch(err => console.log(err))
@@ -27,7 +25,7 @@ const ItemDetailContainer = () => {
         
         if(productos.length === 0){
         return (
-            <div className="text-center">
+            <div className="text-center m-5">
                 <div className="spinner-grow" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
@@ -40,10 +38,7 @@ const ItemDetailContainer = () => {
             </div>
             )
         } 
-    }        
-        
-            
-        
+    }                
 export default ItemDetailContainer
 
 

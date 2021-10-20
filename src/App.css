@@ -31,12 +31,8 @@ main{
 .spanCantidad{
     padding: 15px;
 }
-/* otro */
-.h1Greeting{
-    text-align: center;
-    color: #333333;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+footer, nav{
+    background-color: #f0f0f0;
 }
 .ah5 {
     color: black;
@@ -45,7 +41,6 @@ main{
 .ah5:hover {
     color: rgb(97, 97, 97);
 }
-/* navbar  */
 body {
     margin: 0;
     font-family: 'Urbanist', sans-serif;
@@ -94,4 +89,34 @@ body {
 }
 label{
     font-weight: bold;
+}
+.imgDetail{
+    max-width: 300px;
+}
+.linksIcons{
+    color: #333333;
+    font-size: xx-large;
+    text-decoration: none;
+}
+.instagram:hover{
+    color: #833AB4;
+}
+.twitter:hover{
+    color: #1DA1F2;
+}
+.facebook:hover{
+    color: #3b5998;
+}
+.whatsapp:hover{
+    color: #25D366;
+}
+.ingA{
+    color: black;
+}
+.copyright{
+    font-size: small;
+}
+.footerTitle{
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
 }

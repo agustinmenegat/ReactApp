@@ -10,7 +10,7 @@ const NavBar = () => {
 
     return(
         <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
+        <nav className="navbar navbar-expand-lg navbar-light p-0">
             <div className="container-fluid">
                 <Link to="/" className="navbar-brand"><img src="/img/logo.png" alt="logo" className="imgNav" /></Link>
                 <Button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

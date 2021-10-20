@@ -2,9 +2,9 @@ import {useState} from "react"
 import Button from 'react-bootstrap/Button';
 
 const ItemCount = ({stock, initial, paramOnAdd}) => {
-    
-    const [counter,setCounter] = useState(initial);
 
+    const [counter,setCounter] = useState(initial);
+    
     const handleSumar = () => {
         if (counter === stock){
             return;

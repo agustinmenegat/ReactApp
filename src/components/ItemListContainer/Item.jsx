@@ -15,7 +15,4 @@ const Item = ({description,name,unitPrice,id,pictureUrl}) => {
         </>
     )
 }
-
-
-
 export default Item;
