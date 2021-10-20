@@ -107,7 +107,6 @@ const Cart = () => {
             <Modal.Footer>
               <Button onClick={handleCancelar}>Cancelar</Button>
               <Button variant="success" onClick={handleSubmit((data, e)=> {
-                localStorage.setItem('userData', JSON.stringify(data))
                 handleCancelar()
                 crearOrden(data.name, data.phone, data.email)
                 setOrdenConfirmada(true)

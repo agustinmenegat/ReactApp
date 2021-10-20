@@ -16,8 +16,8 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 
 
 ## Descripción del proyecto
--En el archivo App.jsx de src encontraremos el enrutamiento correspondiente al proyecto mediante el uso de react-router-dom y veremos los principales componentes.
--En la carpeta components tendremos el deglose de cada uno de los componentes nombrados en el punto 1 con su respectiva funcionalidad.
+- En el archivo App.jsx de src encontraremos el enrutamiento correspondiente al proyecto mediante el uso de react-router-dom y veremos los principales componentes.
+- En la carpeta components tendremos el deglose de cada uno de los componentes nombrados en el punto 1 con su respectiva funcionalidad.
 
 ### Página inicial o "home"
 - Encontraremos todos los productos disponibles en la página, sin discriminiar categoría. Son todos los productos que trae el componente ItemListContainer(con su ItemList e Item)
@@ -40,5 +40,12 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 * Bootstrap
 * React-Bootstrap (inicialmente comencé con bootstrap y luego fui sumando esta librería, ya que en el comienzo del proyecto no la conocía.)
 * Firebase
+
+## Gracias a:
+
+* A mi tutor Marcos Lacerenze
+* Profesor Horacio Gutiérrez
+* Tutor Fernando Giraudo
+* ¡Compañeros de cursada!
 
 
