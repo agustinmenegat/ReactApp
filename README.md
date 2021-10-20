@@ -8,16 +8,16 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 
 ## Uso / Instalación
 
-Pasp 1: tener instalado Node.js
-Paso 2: instalar aplicación mediante Create-React-App
-Paso 3: Se podrá clonar y descargar desde github.
-Paso 4: escribir "npm start" desde tu terminal.
+-Paso 1: tener instalado Node.js 
+-Paso 2: instalar aplicación mediante Create-React-App
+-Paso 3: Se podrá clonar y descargar desde github.
+-Paso 4: escribir "npm start" desde tu terminal.
 
 
 
 ## Descripción del proyecto
-*En el archivo App.jsx de src encontraremos el enrutamiento correspondiente al proyecto mediante el uso de react-router-dom y veremos los principales componentes.
-*En la carpeta components tendremos el deglose de cada uno de los componentes nombrados en el punto 1 con su respectiva funcionalidad.
+-En el archivo App.jsx de src encontraremos el enrutamiento correspondiente al proyecto mediante el uso de react-router-dom y veremos los principales componentes.
+-En la carpeta components tendremos el deglose de cada uno de los componentes nombrados en el punto 1 con su respectiva funcionalidad.
 
 ### Página inicial o "home"
 - Encontraremos todos los productos disponibles en la página, sin discriminiar categoría. Son todos los productos que trae el componente ItemListContainer(con su ItemList e Item)
