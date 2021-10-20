@@ -1,4 +1,4 @@
-# Agustín Menegat - Curso React Coderhouse
+# Curso React Coderhouse
 
 ## Descripción
 
@@ -8,10 +8,10 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 
 ## Uso / Instalación
 
--Paso 1: tener instalado Node.js 
--Paso 2: instalar aplicación mediante Create-React-App
--Paso 3: Se podrá clonar y descargar desde github.
--Paso 4: escribir "npm start" desde tu terminal.
+- Paso 1: tener instalado Node.js 
+- Paso 2: instalar aplicación mediante Create-React-App
+- Paso 3: Se podrá clonar y descargar desde github.
+- Paso 4: escribir "npm start" desde tu terminal.
 
 
 
