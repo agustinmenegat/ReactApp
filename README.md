@@ -31,7 +31,7 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 
 ## Video descriptivo
 
-https://imgflip.com/gif/5r62zq
+https://user-images.githubusercontent.com/86387428/138496859-f48480d3-b732-4cbc-8f41-5917c4d8e25e.mp4
 
 ## Dependencias
 
