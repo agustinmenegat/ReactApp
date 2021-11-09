@@ -13,6 +13,8 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 - Paso 3: Se podrá clonar y descargar desde github.
 - Paso 4: escribir "npm start" desde tu terminal.
 
+
+
 ## Descripción del proyecto
 - En el archivo App.jsx de src encontraremos el enrutamiento correspondiente al proyecto mediante el uso de react-router-dom y veremos los principales componentes.
 - En la carpeta components tendremos el deglose de cada uno de los componentes nombrados en el punto 1 con su respectiva funcionalidad.
@@ -29,9 +31,10 @@ Presento una tienda virtual en la que el usuario podrá visualizar los productos
 ### Footer
 - Sin funcionalidad importante, se realizó para darle estilo a la web.
 
+
 ## Video descriptivo
 
-https://user-images.githubusercontent.com/86387428/138496859-f48480d3-b732-4cbc-8f41-5917c4d8e25e.mp4
+<!-- ![Demo](https://github.com/agustinmenegat/ReactApp/blob/master/public/img/videoDescriptivo.mp4) -->
 
 ## Dependencias
 
